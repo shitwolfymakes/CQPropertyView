@@ -60,15 +60,15 @@ LIB_DIR     = ../lib
 INCLUDEPATH += \
 . \
 ../include \
-../../CQUtil/include \
-../../CConfig/include \
-../../CFont/include \
-../../CImageLib/include \
-../../CMath/include \
-../../CFile/include \
-../../CFileUtil/include \
-../../CStrUtil/include \
-../../CRegExp/include \
-../../CGlob/include \
-../../CUtil/include \
-../../COS/include \
+../external/CQUtil/include \
+../external/CConfig/include \
+../external/CFont/include \
+../external/CImageLib/include \
+../external/CMath/include \
+../external/CFile/include \
+../external/CFileUtil/include \
+../external/CStrUtil/include \
+../external/CRegExp/include \
+../external/CGlob/include \
+../external/CUtil/include \
+../external/COS/include \
