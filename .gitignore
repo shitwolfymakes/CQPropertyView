@@ -1,7 +1,6 @@
 *.o
 *.a
 
-moc_*.cpp
 
 src/Makefile
 
@@ -11,6 +10,25 @@ test/CQChartsTest
 bin/
 obj/
 lib/
-src/Makefile
-test/Makefile
-*/*.pro.user
+
+# Qt-es
+object_script.*.Release
+object_script.*.Debug
+*_plugin_import.cpp
+/.qmake.cache
+/.qmake.stash
+*.pro.user
+*.pro.user.*
+*.qbs.user
+*.qbs.user.*
+*.moc
+moc_*.cpp
+moc_*.h
+qrc_*.cpp
+ui_*.h
+*.qmlc
+*.jsc
+Makefile*
+*build-*
+*.qm
+*.prl
