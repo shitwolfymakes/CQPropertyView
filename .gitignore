@@ -10,6 +10,7 @@ test/CQChartsTest
 bin/
 obj/
 lib/
+external/
 
 # Qt-es
 object_script.*.Release
