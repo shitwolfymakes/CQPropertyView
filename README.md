@@ -2,4 +2,4 @@
 
 Qt Property Editor
 
-![snapshot](doc/CQPropertyView.png "Qt Property Editor")
+![snapshot](docs/CQPropertyView.png "Qt Property Editor")
