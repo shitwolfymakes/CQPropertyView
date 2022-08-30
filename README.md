@@ -6,7 +6,7 @@ This project builds successfully with Qt 5.15.2 on apt-based Linux distros
 ![snapshot](docs/CQPropertyView.png "Qt Property Editor")
 
 ## Dependencies
-This package depends on other repositories in (colinw7's)[https://github.com/colinw7] GitHub.
+This package depends on other repositories in [colinw7's](https://github.com/colinw7) GitHub.
 
 Additional dependencies are standard UNIX packages:
  + png
