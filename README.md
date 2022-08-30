@@ -17,7 +17,7 @@ Additional dependencies are standard UNIX packages:
    + libtre.so.5
 
 ## Download and Installation
-There is a turn-key build script in scripts/build.sh
+There is a turn-key build script in `scripts/build.sh`
 To use:
 - `git clone git@github.com:shitwolfymakes/CQPropertyView.git`
 - `cd CQPropertyView/scripts`
