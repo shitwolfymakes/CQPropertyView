@@ -17,11 +17,11 @@ Additional dependencies are standard UNIX packages:
    + libtre.so.5
 
 ## Download and Installation
-There is a turn-key build script in `scripts/build.sh`
+There is a turn-key build script in `tools/build.sh`
 To use:
 - `git clone git@github.com:shitwolfymakes/CQPropertyView.git`
-- `cd CQPropertyView/scripts`
-- `sudo chmod +x scripts/build.sh`
+- `cd CQPropertyView/tools`
+- `sudo chmod +x tools/build.sh`
 - `./build.sh` (don't run with sudo or the permissions will get broken)
 
 This will download colinw7's dependencies into `external/` and then build each
