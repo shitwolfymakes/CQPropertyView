@@ -1,7 +1,7 @@
 # CQPropertyView
 
 ## Qt Property Editor
-This project builds successfully with Qt 5.15.2 on apt-based Linux distros
+This project builds successfully with Qt 5.15.2 on `apt`-based Linux distros
 
 ![snapshot](docs/CQPropertyView.png "Qt Property Editor")
 
@@ -17,13 +17,12 @@ Additional dependencies are standard UNIX packages:
    + libtre.so.5
 
 ## Download and Installation
-There is a turn-key build script in `tools/build.sh`
+There is a bootstrap script in `tools/bootsrap.sh`
 To use:
 - `git clone git@github.com:shitwolfymakes/CQPropertyView.git`
 - `cd CQPropertyView/tools`
-- `sudo chmod +x tools/build.sh`
-- `./build.sh` (don't run with sudo or the permissions will get broken)
+- `chmod +x tools/bootsrap.sh`
+- `./bootsrap.sh` (don't run with sudo or the permissions will get broken)
 
-This will download colinw7's dependencies into `external/` and then build each
-before building `src/` and `test/`
+This will install required packages, download colinw7's dependencies into `external/`, and then build each before building `src/` and `test/`
 
