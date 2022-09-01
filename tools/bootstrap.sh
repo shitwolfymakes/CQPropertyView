@@ -3,7 +3,7 @@ set -eo pipefail
 RED='\033[1;31m'
 NC='\033[0m' # No Color
 
-# Install dependencies
+# Install required packages
 echo -e "${RED}Installing *nix dependency packages...${NC}"
 sudo apt install libpng-dev libjpeg-dev libtre-dev libfreetype6-dev qt5-default libqt5svg5-dev -y
 
@@ -13,29 +13,26 @@ cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &> /dev/null
 # Move into the repo root and use it as the working dir
 cd "$(git rev-parse --show-cdup)"
 git_root="$(pwd)"
-ext_dir="${git_root}/external"
 
-# Download dependencies
-echo -e "${RED}Cloning dependencies...${NC}"
-dependencies=(CQUtil CConfig CFont CImageLib CMath CFile CFileUtil CStrUtil CRegExp CGlob CUtil COS)
-for dep in "${dependencies[@]}"; do
-    if [[ ! -d "$ext_dir/$dep" ]]; then
-        echo -e "${RED}--- Clone $dep ---${NC}"
-        git clone "git@github.com:colinw7/${dep}.git" "$ext_dir/$dep"
-        echo
-    fi
-done
+# Enumerate required external dependencies
+dependencies=(
+    CQUtil
+    CConfig
+    CFont
+    CImageLib
+    CMath
+    CFile
+    CFileUtil
+    CStrUtil
+    CRegExp
+    CGlob
+    CUtil
+    COS
+)
 
-# Build dependencies and project
-echo -e "${RED}Building dependencies...${NC}"
-for dep in "${dependencies[@]}"; do
-    if [[ -d $ext_dir/$dep ]]; then
-        echo -e "${RED}--- Build $dep ---${NC}"
-        (cd "$ext_dir/$dep" && make)
-        echo
-    fi
-done
-echo -e "${RED}All dependencies built successfully!${NC}"
+# Download and build external dependencies
+chmod +x tools/build_dependencies.sh
+./tools/build_dependencies.sh ${dependencies[@]}
 
 # Build CQPropertyView targets
 echo
