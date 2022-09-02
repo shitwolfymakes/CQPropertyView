@@ -12,6 +12,8 @@ obj/
 lib/
 external/
 
+!external/CMakeLists.txt
+
 # Qt-es
 object_script.*.Release
 object_script.*.Debug
