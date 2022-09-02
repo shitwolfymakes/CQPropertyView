@@ -40,3 +40,4 @@ src/CMakeLists.txt.user
 tests/CMakeLists.txt.user
 CMakeCache.txt
 **/CMakeCache.txt
+CMakeFiles/
