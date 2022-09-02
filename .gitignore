@@ -10,8 +10,8 @@ test/CQChartsTest
 bin/
 obj/
 lib/
-external/
 
+external/*
 !external/CMakeLists.txt
 
 # Qt-es
