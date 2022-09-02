@@ -35,3 +35,6 @@ Makefile*
 *build-*
 *.qm
 *.prl
+CMakeLists.txt.user
+src/CMakeLists.txt.user
+tests/CMakeLists.txt.user
