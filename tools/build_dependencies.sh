@@ -3,7 +3,8 @@ set -eo pipefail
 RED='\033[1;31m'
 NC='\033[0m' # No Color
 
-dependencies=("$@")
+dependencies=($@)
+echo "Dependencies passed: ${dependencies[@]}"
 
 # cd into the directory this script is located
 cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &> /dev/null
@@ -39,7 +40,16 @@ done
 echo -e "${RED}Building dependencies...${NC}"
 for dep in "${dependencies[@]}"; do
     echo -e "${RED}--- Build $dep ---${NC}"
-    (cd "$ext_dir/$dep" && make)
+    cd "$ext_dir/$dep/src"
+
+    if [[ ${dep} == "CQUtil" ]]; then
+       qmake
+       make
+    else
+        make CC='g++ -fPIC'
+    fi
+
+    cd "${git_root}"
     echo
 done
 echo -e "${RED}All dependencies built successfully!${NC}"
